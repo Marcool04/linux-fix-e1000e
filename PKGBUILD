@@ -17,12 +17,6 @@ makedepends=(
   python
   tar
   xz
-
-  # htmldocs
-  graphviz
-  imagemagick
-  python-sphinx
-  texlive-latexextra
 )
 options=('!strip')
 _srcname=linux-${pkgver%.*}
@@ -31,6 +25,7 @@ source=(
   https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
   $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
   config  # the main kernel config file
+  'fix-tso-hang.patch'
 )
 validpgpkeys=(
   ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
@@ -59,7 +54,18 @@ prepare() {
   echo "Setting version..."
   echo "-$pkgrel" > localversion.10-pkgrel
   echo "${pkgbase#linux}" > localversion.20-pkgname
+  make defconfig
+  # alternative configuration methods:
+  #make nconfig    # new CLI menu for configuration
+  #make menuconfig # CLI menu for configuration
+  #make xconfig    # X-based configuration
+  #make oldconfig  # using old config from previous kernel version
+  # ... or manually edit .config
+  #make prepare
+  make -s kernelrelease > version
+  make mrproper
 
+  echo "Applying all patches" 
   local src
   for src in "${source[@]}"; do
     src="${src%%::*}"
@@ -81,8 +87,7 @@ prepare() {
 
 build() {
   cd $_srcname
-  make all
-  make htmldocs
+  _make all
 }
 
 _package() {
@@ -229,7 +234,6 @@ _package-docs() {
 pkgname=(
   "$pkgbase"
   "$pkgbase-headers"
-  "$pkgbase-docs"
 )
 for _p in "${pkgname[@]}"; do
   eval "package_$_p() {
@@ -237,5 +241,3 @@ for _p in "${pkgname[@]}"; do
     _package${_p#$pkgbase}
   }"
 done
-
-# vim:set ts=8 sts=2 sw=2 et:
