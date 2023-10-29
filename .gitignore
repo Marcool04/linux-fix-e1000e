@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+!config
+!fix-tso-hang.patch
+!keys/*
+!LICENSE
+!PKGBUILD

@@ -42,7 +42,8 @@ b2sums=('3bb35ba0386b00aa76dfd073e87b0d5a319d3116a80c39b11a3acd1219bc7d8b3809c1d
         'SKIP'
         'fda390a1633ea51e00b9d6ab4b89ca2e9ef472261e12e6e0d978d42678449150c384d2be1e9d9655704ffc2ad2f34b6e6dcf0b5862f1419d805e6c67e3e67bb3'
         'SKIP'
-        '3ef3c64bf46d0ca5893d4fcdedb6278507f5e05571836bcd871f6b832de97295cb7b09e8cd95fd2928fbfa324081d96b4df3bb016dfc8206976a6154b5c32217')
+        '1445dc90cf8bd3f2b9493e9e48eb76247bd37de412bdb247b132694e047ec260c25203836888ce6c1c864f46dab80b453b3f47d8b3a92f1f9dffc5589d7bc320'
+        '66447335ab49ef0e428f396fabe52b1eedbd7043515c4f4bf935a37a508c2fe53270b9903247635cfa32ff59a671793ffcaf78a902b1f61ffe51898b43f38509')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
@@ -87,7 +88,7 @@ prepare() {
 
 build() {
   cd $_srcname
-  _make all
+  make all
 }
 
 _package() {
