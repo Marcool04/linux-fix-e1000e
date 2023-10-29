@@ -1,0 +1,17 @@
+name: build_archlinux_package
+
+on: ['push','pull_request']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: 2m/arch-pkgbuild-builder@v1.16
+      with:
+        target: 'srcinfo'
+        pkgname: '.'
+    - uses: 2m/arch-pkgbuild-builder@v1.16
+      with:
+        target: 'pkgbuild'
+        pkgname: '.'
