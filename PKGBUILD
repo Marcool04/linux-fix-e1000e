@@ -6,6 +6,7 @@ pkgver=6.6.1.arch1
 pkgrel=2
 pkgdesc='Linux'
 url='https://github.com/Marcool04/linux-fix-e1000e'
+_orig_url='https://github.com/archlinux/linux'
 arch=(x86_64)
 license=(GPL2)
 makedepends=(
@@ -24,7 +25,7 @@ _srcname=linux-${pkgver%.*}
 _srctag=v${pkgver%.*}-${pkgver##*.}
 source=(
   https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
-  $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
+  $_orig_url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
   config  # the main kernel config file
   'fix-tso-hang.patch'
 )
