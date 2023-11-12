@@ -1,10 +1,11 @@
-# Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+
+# Maintainer: Mark Collins <tera_1225 hat hotmail ðot com>
 
 pkgbase=linux-fix-e1000e
 pkgver=6.6.1.arch1
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux'
-url='https://github.com/archlinux/linux'
+url='https://github.com/Marcool04/linux-fix-e1000e'
 arch=(x86_64)
 license=(GPL2)
 makedepends=(
@@ -38,13 +39,13 @@ sha256sums=('da1ed7d47c97ed72c9354091628740aa3c40a3c9cd7382871f3cedbd60588234'
             '9fd606b2ac0b4ae5df8867b7651574a2e5c480366bac224406fc34ad5d79009b'
             'SKIP'
             'bdfd2629b1fe907b9270fc540adaa51ff526cbd361b23aba38c4c5fce7f5397b'
-            'd4c13ad3150f5c76884e177aea33ab34863b4472f7e52ba9b678c16489d9b59b')
+            '43c0d6060817119437a0dd4fddb69e116bf7514f3a35af33786d4a6af3499583')
 b2sums=('3bb35ba0386b00aa76dfd073e87b0d5a319d3116a80c39b11a3acd1219bc7d8b3809c1def24a3c4f52abc60f70c170a2f80d80c6b54459eec016c5ddc404c6fc'
         'SKIP'
         'fda390a1633ea51e00b9d6ab4b89ca2e9ef472261e12e6e0d978d42678449150c384d2be1e9d9655704ffc2ad2f34b6e6dcf0b5862f1419d805e6c67e3e67bb3'
         'SKIP'
         '3ef3c64bf46d0ca5893d4fcdedb6278507f5e05571836bcd871f6b832de97295cb7b09e8cd95fd2928fbfa324081d96b4df3bb016dfc8206976a6154b5c32217'
-        '66447335ab49ef0e428f396fabe52b1eedbd7043515c4f4bf935a37a508c2fe53270b9903247635cfa32ff59a671793ffcaf78a902b1f61ffe51898b43f38509')
+        '6c21b00dde6a31d44f9fcbecf8462a03fab49410a12e10962b88aced63c07ac4dae833b49d89e6f84ba4b7ef63b86efbbdfe03d080744765e2a68c1fddd1f444')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase

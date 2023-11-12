@@ -6,11 +6,9 @@
  
 +	/* Fix for hang and reset when forwarding traffic to a client behind NAT,
 +         * which affects some e1000e devices that have PCH2 device */
-+        if (adapter->pdev->device == E1000_DEV_ID_PCH2_LV_V) {
-+            e_info("Disabling TSO on problematic device to avoid hardware unit hang.\n");
-+            features &= ~NETIF_F_TSO;
-+            features &= ~NETIF_F_TSO6;
-+        }
++          e_info("Disabling TSO to avoid hardware unit hang.\n");
++          features &= ~NETIF_F_TSO;
++          features &= ~NETIF_F_TSO6;
 +
  	/* Since there is no support for separate Rx/Tx vlan accel
  	 * enable/disable make sure Tx flag is always in same state as Rx.
