@@ -1,7 +1,7 @@
 # Maintainer: Mark Collins <tera_1225 hat hotmail ðot com>
 
 pkgbase=linux-fix-e1000e
-pkgver=6.6.7.arch1
+pkgver=6.6.8.arch1
 pkgrel=1
 pkgdesc='Linux'
 url='https://github.com/Marcool04/linux-fix-e1000e'
@@ -34,15 +34,15 @@ validpgpkeys=(
   A2FF3A36AAA56654109064AB19802F8B0D70FC30  # Jan Alexander Steffens (heftig)
 )
 # https://www.kernel.org/pub/linux/kernel/v6.x/sha256sums.asc
-sha256sums=('0ce68ec6019019140043263520955ecd04839e55a1baab2fa9155b42bb6fd841'
+sha256sums=('5036c434e11e4b36d8da3f489851f7f829cf785fa7f7887468537a9ea4572416'
             'SKIP'
-            'a8a4f329887dbb3b25bc06126115fc678b5bb295e5d0464d503301a5d25a6d5a'
+            '77f0ad619945e18ab880733129a49ad0af28c3f2fd7b1ae9bbb6465b5a4cd316'
             'SKIP'
             'f77aab33af83c635e0445c6e424922cdc054efe2430c8c831f8bead23e08ba88'
             '7ad7a61badc6fbaeb7eb406433bc7f7271ecc561b76cc2ef393eb201b71fc3d5')
 b2sums=('000c45693d074c79816ea61c8e46b58281eed5532903df92c466d3f062ec6a302e59c2782235b21d309976929659e581ff08c8d5b067bb02e7f0cc4e40593643'
         'SKIP'
-        'fab4ae925994ac2e7d16c00021e572b980ff55eae4083a1a71754101f84a6e5943e53e22a75cfdd6ba4f6c6a5b3bc3298dc8ee20cd8653dd4fa6951576545972'
+        '3445b1884f0ec6fccd72091e23c74538c80991195aab53f54c9a955437e35951ba689aa59eee35f2faa2440273e3c384e043333e63a22ce41dc5cd9d054d1a2f'
         'SKIP'
         'eee80b262d447770f89bb16e4c84a5faedd8e2a46d57a5b6ad6371f5a9a8e11194f82c9160d78486fc1a889ad9dea6f0b2d90b8a21235aefc30bf7fe3ef355f6'
         '1617b256d8f6f6bb40059a441503007b46fdc15a6d3e1b35ee6ff1f091214f7a8a636d1dfeaf10d3a06fd8de1ea51c224cc5ff39e15fb78065775a50a87236f0')
